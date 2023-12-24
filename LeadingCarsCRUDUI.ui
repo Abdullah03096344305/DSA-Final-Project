@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>891</width>
+    <height>651</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>891</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QFrame#frame{
+background-color:rgb(141, 141, 141);
+}
+</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QPushButton" name="CrossButton">
+     <property name="geometry">
+      <rect>
+       <x>830</x>
+       <y>10</y>
+       <width>41</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>20</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+	border: none;
+	background-color: rgba(0,0,0,0);
+   color: white
+}
+QPushButton:hover {
+	background-color: rgba(0,125,236,255);
+}
+QPushButton:pressed {	
+	background-color: rgba(0,0,0,0);
+}</string>
+     </property>
+     <property name="text">
+      <string>X</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="MinimizeButton">
+     <property name="geometry">
+      <rect>
+       <x>790</x>
+       <y>10</y>
+       <width>41</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>40</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+	border: none;
+	background-color: rgba(0,0,0,0);
+   color: white
+}
+QPushButton:hover {
+	background-color: rgba(0,125,236,255);
+}
+QPushButton:pressed {	
+	background-color: rgba(0,0,0,0);
+}</string>
+     </property>
+     <property name="text">
+      <string>-</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="frame_2">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>50</y>
+      <width>891</width>
+      <height>561</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:skin;
+
+</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="geometry">
+      <rect>
+       <x>-160</x>
+       <y>70</y>
+       <width>1071</width>
+       <height>491</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="tab2">
+      <property name="styleSheet">
+       <string notr="true">background-color:rgba(16, 30, 41, 240);
+border:none</string>
+      </property>
+      <attribute name="title">
+       <string>Tab 2</string>
+      </attribute>
+      <widget class="QLineEdit" name="NameEdit">
+       <property name="geometry">
+        <rect>
+         <x>170</x>
+         <y>100</y>
+         <width>171</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color:rgb(215, 215, 215)
+</string>
+       </property>
+       <property name="text">
+        <string>Car Name</string>
+       </property>
+       <property name="placeholderText">
+        <string>Imported File</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="AddButton">
+       <property name="geometry">
+        <rect>
+         <x>570</x>
+         <y>390</y>
+         <width>121</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+   background-color:rgb(17, 30, 42);
+	border: none;
+   color: white;
+    border-radius:10px;
+}
+QPushButton:hover {
+	background-color: rgba(0,125,236,255);
+}
+QPushButton:pressed {	
+	background-color: white;
+   color : black
+}</string>
+       </property>
+       <property name="text">
+        <string>ADD </string>
+       </property>
+      </widget>
+      <widget class="QTableWidget" name="StuInfoTable">
+       <property name="geometry">
+        <rect>
+         <x>410</x>
+         <y>20</y>
+         <width>601</width>
+         <height>351</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QTableWidget {
+
+background-color:white;
+color:black;
+
+
+}</string>
+       </property>
+       <column>
+        <property name="text">
+         <string>Car Name</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>VIN</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Number Plate</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Model</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Price</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Engine</string>
+        </property>
+       </column>
+      </widget>
+      <widget class="QLineEdit" name="RegEdit">
+       <property name="geometry">
+        <rect>
+         <x>220</x>
+         <y>160</y>
+         <width>171</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color:rgb(215, 215, 215)
+</string>
+       </property>
+       <property name="text">
+        <string>VIN</string>
+       </property>
+       <property name="placeholderText">
+        <string>Imported File</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="gpaEdit">
+       <property name="geometry">
+        <rect>
+         <x>170</x>
+         <y>210</y>
+         <width>171</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color:rgb(215, 215, 215)
+</string>
+       </property>
+       <property name="text">
+        <string>Number Plate</string>
+       </property>
+       <property name="placeholderText">
+        <string>Imported File</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="NumberEdit">
+       <property name="geometry">
+        <rect>
+         <x>220</x>
+         <y>270</y>
+         <width>171</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color:rgb(215, 215, 215)
+</string>
+       </property>
+       <property name="text">
+        <string>Model</string>
+       </property>
+       <property name="placeholderText">
+        <string>Imported File</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="uniEdit">
+       <property name="geometry">
+        <rect>
+         <x>170</x>
+         <y>320</y>
+         <width>171</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color:rgb(215, 215, 215)
+</string>
+       </property>
+       <property name="text">
+        <string>Price</string>
+       </property>
+       <property name="placeholderText">
+        <string>Imported File</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="DeleteButton">
+       <property name="geometry">
+        <rect>
+         <x>890</x>
+         <y>390</y>
+         <width>121</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+   background-color:rgb(17, 30, 42);
+	border: none;
+   color: white;
+    border-radius:10px;
+}
+QPushButton:hover {
+	background-color: rgba(0,125,236,255);
+}
+QPushButton:pressed {	
+	background-color: white;
+   color : black
+}</string>
+       </property>
+       <property name="text">
+        <string>Delete </string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="EditButton">
+       <property name="geometry">
+        <rect>
+         <x>730</x>
+         <y>390</y>
+         <width>121</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+   background-color:rgb(17, 30, 42);
+	border: none;
+   color: white;
+    border-radius:10px;
+}
+QPushButton:hover {
+	background-color: rgba(0,125,236,255);
+}
+QPushButton:pressed {	
+	background-color: white;
+   color : black
+}</string>
+       </property>
+       <property name="text">
+        <string>Edit </string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="unioEdit">
+       <property name="geometry">
+        <rect>
+         <x>190</x>
+         <y>380</y>
+         <width>171</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color:rgb(215, 215, 215)
+</string>
+       </property>
+       <property name="text">
+        <string>Engine Quality</string>
+       </property>
+       <property name="placeholderText">
+        <string>Imported File</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>10</y>
+       <width>341</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI</family>
+       <pointsize>23</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:rgba(0,125,236,255);
+border-radius:10px;
+background-color:rgb(16, 29, 41)</string>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Leading Cars Menu&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
